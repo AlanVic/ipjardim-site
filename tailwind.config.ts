@@ -17,7 +17,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        mosk: ["Mosk", "sans-serif"],
+        mosk: ["var(--font-mosk)", "sans-serif"],
       },
     },
   },

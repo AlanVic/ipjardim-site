@@ -29,6 +29,10 @@ jobs:
         run: npm ci
 
       - name: Build
+        env:
+          # Para github.io puro, usa o nome do repositório como subpasta (ex: /ipjardim-site).
+          # Quando for usar o domínio ipjardim.com.br, basta alterar para: NEXT_PUBLIC_BASE_PATH: ""
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
         run: npm run build
 
       - name: Upload artifact

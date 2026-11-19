@@ -1,84 +1,95 @@
 export default function Sobre() {
+  const pilares = [
+    {
+      icon: "📜",
+      titulo: "Confissão Centrada no Evangelho",
+      resumo:
+        "Nossa fé é histórica e confessional, vinculada à tradição reformada presbiteriana e aos Símbolos de fé de Westminster. Sabendo que fomos salvos puramente pela graça, rejeitamos a ortodoxia soberba, o legalismo e o sectarismo.",
+    },
+    {
+      icon: "⛪",
+      titulo: "Culto Centrado no Evangelho",
+      resumo:
+        "A liturgia e a adoração conduzem o povo pela história da redenção. Por meio da pregação bíblica expositiva, somos constantemente lembrados de nossa insuficiência e da suficiência plena de Cristo.",
+    },
+    {
+      icon: "🤝",
+      titulo: "Comunidade Centrada no Evangelho",
+      resumo:
+        "O amor que brota da cruz gera uma embaixada da nova criação: uma família de fé marcada pelo discipulado, pela comunhão dos santos e pelo serviço mútuo e à cidade.",
+    },
+    {
+      icon: "🌍",
+      titulo: "Cosmovisão Centrada no Evangelho",
+      resumo:
+        "Fundamentados na Criação, Queda, Redenção e Consumação, dialogamos com a cultura em três frentes: Missão (esperança às nações), Apologética (defesa da verdade) e Engajamento Cultural (construção do belo e do justo).",
+    },
+  ];
+
   return (
     <section id="sobre" className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Header */}
-        <div className="text-center mb-16">
+        {/* Header Quem Somos */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-verde-medio uppercase tracking-widest text-xs font-bold">
-            Quem Somos
+            Identidade & Propósito
           </span>
-          <h2 className="text-4xl md:text-5xl font-black text-verde-escuro mt-3 mb-5">
-            Sobre a Nossa Igreja
+          <h2 className="text-4xl md:text-5xl font-black text-verde-escuro mt-3 mb-6">
+            Quem Nós Somos
           </h2>
-          <div className="w-16 h-1 bg-verde-medio mx-auto rounded-full" />
+          <div className="w-16 h-1 bg-verde-medio mx-auto rounded-full mb-8" />
+          
+          <p className="text-xl md:text-2xl text-gray-800 font-medium leading-relaxed">
+            Somos uma igreja <span className="text-verde-primario font-bold">cristã, reformada e presbiteriana</span>, 
+            intencionalmente centrada no Evangelho, engajada na adoração, no ensino, discipulado e na missão.
+          </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
-          <div>
-            <p className="text-gray-600 text-lg leading-relaxed mb-6">
-              A <strong className="text-verde-escuro">Igreja Presbiteriana do Jardim</strong> é
-              uma igreja centrada no Evangelho, comprometida com o ensino expositivo
-              das Escrituras e com a formação de discípulos de Jesus Cristo.
-            </p>
-            <p className="text-gray-600 text-lg leading-relaxed mb-6">
-              Fundada em 2019, somos uma família que cresce na graça, pratica a comunhão
-              e alcança nossa comunidade — por meio da pregação fiel da Palavra, da oração
-              e do serviço ao próximo.
-            </p>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Seja você da vizinhança ou de longe — há um lugar para você aqui. 🌱
+        {/* Quem Almejamos Ser */}
+        <div className="mb-20">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <h3 className="text-2xl md:text-3xl font-black text-verde-escuro mb-3">
+              Quem Almejamos Ser
+            </h3>
+            <p className="text-gray-600 text-base leading-relaxed">
+              Cremos que o Evangelho de Cristo deve ser o fundamento de tudo o que cremos e fazemos. 
+              Pela graça de Deus, buscamos ser um corpo marcado por:
             </p>
           </div>
 
-          {/* Cards de valores */}
-          <div className="grid grid-cols-1 gap-6">
-            {[
-              {
-                icon: "✝️",
-                titulo: "Nossa Missão",
-                texto:
-                  "Proclamar o Evangelho de Jesus Cristo, fazer discípulos e edificar a Igreja para a glória de Deus.",
-              },
-              {
-                icon: "👁️",
-                titulo: "Nossa Visão",
-                texto:
-                  "Ser uma comunidade de fé vibrante, que transforma vidas e impacta nossa cidade com o amor de Cristo.",
-              },
-              {
-                icon: "📖",
-                titulo: "Nossos Valores",
-                texto:
-                  "A Bíblia como regra suprema de fé e prática; oração, comunhão, serviço e missão.",
-              },
-            ].map((item) => (
+          {/* Cards dos 4 Pilares */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {pilares.map((pilar) => (
               <div
-                key={item.titulo}
-                className="flex gap-5 p-5 rounded-2xl bg-verde-suave border border-verde-claro/20 hover:shadow-md transition-shadow"
+                key={pilar.titulo}
+                className="p-8 rounded-3xl bg-verde-suave/60 border border-verde-claro/30 hover:border-verde-medio hover:shadow-lg transition-all duration-300"
               >
-                <span className="text-3xl flex-shrink-0">{item.icon}</span>
-                <div>
-                  <h3 className="font-bold text-verde-escuro mb-1">{item.titulo}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{item.texto}</p>
+                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-3xl shadow-sm mb-6 border border-verde-claro/20">
+                  {pilar.icon}
                 </div>
+                <h4 className="text-xl font-bold text-verde-escuro mb-3">
+                  {pilar.titulo}
+                </h4>
+                <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                  {pilar.resumo}
+                </p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Stats */}
+        {/* Fundação e Destaque */}
         <div className="grid grid-cols-2 gap-6 max-w-sm mx-auto">
           {[
             { num: "2019", label: "Ano de Fundação" },
-            { num: "✝️", label: "Fundados no Evangelho" },
+            { num: "PB", label: "Campina Grande" },
           ].map((s) => (
             <div
               key={s.label}
-              className="text-center p-6 rounded-2xl bg-gradient-to-br from-verde-primario to-verde-medio text-white"
+              className="text-center p-6 rounded-2xl bg-gradient-to-br from-verde-primario to-verde-medio text-white shadow-sm"
             >
               <div className="text-3xl font-black mb-1">{s.num}</div>
-              <div className="text-sm font-medium opacity-80">{s.label}</div>
+              <div className="text-sm font-medium opacity-90">{s.label}</div>
             </div>
           ))}
         </div>
