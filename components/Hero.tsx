@@ -1,4 +1,5 @@
 import Image from "next/image";
+import logoBranco from "@/public/logos/logo-branco.png";
 
 export default function Hero() {
   return (
@@ -18,7 +19,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white">
         <div className="flex justify-center mb-8">
           <Image
-            src="/logos/logo-branco.png"
+            src={logoBranco}
             alt="IPJardim"
             width={120}
             height={120}

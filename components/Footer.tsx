@@ -1,4 +1,5 @@
 import Image from "next/image";
+import logoBranco from "@/public/logos/logo-branco.png";
 
 export default function Footer() {
   return (
@@ -9,7 +10,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <Image
-                src="/logos/logo-branco.png"
+                src={logoBranco}
                 alt="IPJardim"
                 width={40}
                 height={40}

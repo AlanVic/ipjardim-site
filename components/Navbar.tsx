@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import logoColorida from "@/public/logos/logo-colorida.png";
 
 const navLinks = [
   { href: "#sobre", label: "Sobre" },
@@ -32,7 +33,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="#" className="flex items-center gap-3">
           <Image
-            src="/logos/logo-colorida.png"
+            src={logoColorida}
             alt="Igreja Presbiteriana do Jardim"
             width={44}
             height={44}
